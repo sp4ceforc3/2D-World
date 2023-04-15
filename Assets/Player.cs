@@ -21,8 +21,12 @@ public class Player : MonoBehaviour
             character.SetActive(false);
         }
 
-        // First Charcter shall be the active one       
-        player = this.transform.GetChild(0).gameObject;
+        // First Charcter shall be the active one
+        // index 0 ist the camera
+        this.transform.GetChild(0).gameObject.SetActive(true);
+        
+
+        player = this.transform.GetChild(1).gameObject;
         player.SetActive(true);
     }
 
